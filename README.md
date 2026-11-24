@@ -1,7 +1,6 @@
-# Haru Studio: static HTML rebuild
+# Haru Studio: static HTML site
 
-This is an original site with its own brand, copy, images and code. It reproduces the layout, type scale,
-interactions and page structure of the reference studio site (kigo.studio). It is plain HTML, CSS and JS
+This is an original site with its own brand, copy, images and code. It is plain HTML, CSS and JS
 with no server and no build step needed to view it.
 
 ## Opening the site
@@ -28,8 +27,8 @@ works from `file://` too, including fonts, video, page transitions and tools.
   - The **mobile menu** has a services accordion.
 - **Cursor.** A custom circle labelled "Visit" or "Play" appears on hover. There is also a scroll indicator
   and a page transition (the page slides up and scales) between pages.
-- **Studio reel.** Clicking it opens the video full screen with sound (the only element with audio, as on
-  the reference). It has a close button and a magnetic play button.
+- **Studio reel.** Clicking it opens the video full screen with sound (the only element with audio).
+  It has a close button and a magnetic play button.
 - **Service posters.** They stack sticky and the incoming one rotates in.
 - **Reveal animations, falling petals and the dancer.** Titles and cards reveal on scroll, petals fall in the
   background, and the dancer changes pose as you scroll.
@@ -49,7 +48,7 @@ Forms and bookings are demos: they never send data anywhere.
 ## Editing
 This folder holds only the built output, so edit the `.html` files and assets directly.
 - The generator that produced them is not here: `_build/` (copy in `data.mjs`, `articles.mjs`, page
-  templates, `build.mjs`, `mocks.mjs`), `clone-kit/` and `docs/` are missing. Restore them before relying on
+  templates, `build.mjs`, `mocks.mjs`), and `docs/` are missing. Restore them before relying on
   `node _build/build.mjs`, which would rewrite every `.html` file.
 - CSS is in `assets/css/`:
   - `main.css`: tokens and chrome
@@ -76,16 +75,10 @@ Credits are listed in `assets/CREDITS.json`.
 - **Source media.** Raw photos and the original video and music were kept in `_build/source-media/`, which
   is not in this folder.
 
-## What differs from the reference
-- **Illustrations.** The reference uses commissioned ukiyo-e-style illustrations. Here they are photographic
-  cut-outs from Unsplash, so the style is collage-like rather than painted.
+## Design notes
+- **Illustrations.** Photographic cut-outs from Unsplash, so the style is collage-like rather than painted.
 - **Sakura branch.** It is generated procedurally in SVG, not hand-drawn.
 - **Kanji.** The 春 is the Yuji Boku glyph revealed with a brush-order mask, not a traced stroke drawing.
-- **Page transition.** The reference is a single-page app and slides the old and new pages at the same time.
-  Because this site uses separate HTML files, the transition is emulated: the old page slides out, a paper
+- **Page transition.** This site uses separate HTML files, so the transition is emulated: the old page slides out, a paper
   panel follows, then the new page slides in on load.
 - **Spanish locale.** There is no second language.
-
-## Research tooling
-The read-only research scripts (`clone-kit/`: `scrollshots.mjs`, `probe.mjs`, `audit-local.mjs`) and notes
-(`docs/RESEARCH.md`) are not in this folder.

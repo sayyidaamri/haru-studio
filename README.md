@@ -1,3 +1,5 @@
+![Preview](docs/preview/homepage.gif)
+
 # Haru Studio: static HTML site
 
 This is an original site with its own brand, copy, images and code. It is plain HTML, CSS and JS
